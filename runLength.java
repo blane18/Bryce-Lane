@@ -6,21 +6,20 @@ class runLength
 		
 		int count = 0;
 		
-		char ex = input.charAt(0);
+		char ex = str.charAt(0);
 		
-		for(int i=0;i<input.length();i++)
+		for(int i=0;i<str.length();i++)
 		{
-			if(input.charAt(i)==ex)
+			if(str.charAt(i)==ex)
 				count++;
 			
 			else
 			{
-				System.out.print(count+""+ex);
-				count = 1;
-				ex = input.charAt(i);
+				input = input + str.charAt(i);
 			}
 		}
-		return(ex+""+count);
+		
+		return input;
 	}
 		
 		
@@ -37,8 +36,12 @@ class runLength
 		
 		
 		
+		//public String runLengthChecker(String , String)
 		
+			
 }
+
+
 		
 		
 		
@@ -56,5 +59,3 @@ class runLength
 		
 		
 		
-		
-//public String runLengthChecker(String , String)
