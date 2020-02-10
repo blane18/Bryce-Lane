@@ -1,3 +1,45 @@
+import javax.swing.*;
+
+class RobD extends JFrame
+{
+JPanel pnl = new JPanel();
+JTextField txt1 = new JTextField( 38 ) ;
+JTextArea txtArea = new JTextArea(6,37);
+JScrollPane pane = new JScrollPane( txtArea ) ;
+
+	public RobD()
+	{
+		super("All The Moneys");
+		setSize( 600,200 );
+		setDefaultCloseOperation( EXIT_ON_CLOSE );
+		add(pnl);
+		setVisible(true);
+		pnl.add( txt1 ) ;
+		pnl.add(pane);
+	}
+
+	public static void main ( String[] args )
+	{
+		RobD gui = new RobD();
+	} 
+		
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class robertD{
 	
 	Moneys[] pocketChange;
@@ -35,28 +77,42 @@ class robertD{
 }
 
 class dinero{
+	
+	public static robertD.Moneys newCoin(){
+		int randomNumber;
+		randomNumber = (int) (Math.random() * 6);
+/*		robertD.Moneys[] randomCoin = new robertD.Moneys[]{robertD.Moneys.penny, 
+														   robertD.Moneys.nickel, 
+														   robertD.Moneys.dime, 
+														   robertD.Moneys.quarter, 
+														   robertD.Moneys.halfdollar, 
+														   robertD.Moneys.dollar};*/
+		return robertD.Moneys.values()[randomNumber];
+	}
+	
 	public static void main(String... v){
 		robertD Duckets = new robertD();
 		
-		Duckets.pocketChange = new robertD.Moneys[20];
-		
-		
-		// give each of the coins a value
-		for(robertD.Moneys coin: Duckets.pocketChange){ //might need different for loop
-			//System.out.println(Duckets.getValue(coin) );
-			coin = robertD.Moneys.nickel;
-						
-		
-			
-			//System.out.println(Duckets.getValue(coin) );
-			Duckets.pocketChange[0] = coin;
+		Duckets.pocketChange = new robertD.Moneys[100];
+
+		// give each of the coins a value		
+		for(int index = 0; index < Duckets.pocketChange.length; index++){
+			Duckets.pocketChange[index] = newCoin();
 		}
 		
-		System.out.println(Duckets.getValue(Duckets.pocketChange[0]) );
+		int sum=0;
+		
+		for(robertD.Moneys coin: Duckets.pocketChange){ 
+			System.out.print(coin + " |" );
+			sum += Duckets.getValue(coin);
+		}
+		System.out.println( );
+
+		System.out.println("$"+(double)sum/100.00 );
+		
 		//Show me the coins in your pocketChange.
 		
-		//int sum = 
-		//System.out.print(sum);
+		
 		//Give me the sum of those coins.
 		
 	}
