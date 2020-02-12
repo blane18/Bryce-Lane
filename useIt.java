@@ -1,60 +1,60 @@
 class Xamples{
-
+	
 
 	public String ShowYours() {
-		System.out.println("I will show mine");
+		return "";
 	}
 	
 	public String ShowMine() {
-		System.out.println("you show yours");
+		return "b";
 	}
-
-	/*
+	
 	public int ShowYours(String C) {
-		System.out.println("how many cards do you have");
+		return 4;
 	}
 	
 	public int ShowMine(String D) {
-		System.out.println("I have 5 cards");
+		return 5;
 	}
 	
 	public double ShowYours(int C) {
-		System.out.print(6);
+		return 2.22;
 	}
 	
 	public double ShowMine(int D) {
-		System.out.print(5);
+		return 2.23;
 	}
-*/
+
 }
 class useIt {
-	public static void main(String[] args){
+	
 	
 	Xamples iWill = new Xamples();
 	
 	 
-	
-	
-	iWill.ShowMine();
-		//System.out.print(ShowMine);
+	/*int saveInt = 0;
+	String SaveString = "testing";
+	double SaveDouble = 42.42;
+	*/
+	String X = iWill.ShowMine();
 		
-	iWill.ShowYours();
-		//System.out.println(ShowYours);
-	/*
-	iWill.ShowMine("i'm telling mom");
-		System.out.println(ShowMine);
-	
-	iWill.ShowYours("ok");
-		System.out.println(ShowYours);
-	
-	iWill.ShowMine(42);
-		System.out.println(ShowMine);
+	String SaveString = iWill.ShowYours();
 		
-	iWill.ShowYours(24);
-		System.out.println(ShowYours);*/
 	
+	int YX = iWill.ShowMine("i'm telling mom");
+		
 	
+	int saveInt = iWill.ShowYours("ok");
+		
 	
+	double SaveDouble = iWill.ShowMine(42);
+		
+		
+	double Weird = iWill.ShowYours(24);
+		
+	
+	public static void main(String[] args){
+	System.out.println(" ");
 	
 	
 	
